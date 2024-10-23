@@ -10,3 +10,15 @@ $(document).ready(function() {
         });
     }
 });
+
+let currentSlide = 0;
+
+function changeSlide(direction) {
+    const slides = document.querySelectorAll('.banner-slide');
+    slides[currentSlide].classList.remove('active'); // Ẩn slide hiện tại
+    currentSlide = (currentSlide + direction + slides.length) % slides.length; // Tính chỉ số slide tiếp theo
+    slides[currentSlide].classList.add('active'); // Hiện slide mới
+
+    const bannerContainer = document.querySelector('.banner-container');
+    bannerContainer.style.transform = `translateX(-${currentSlide * 100}%)`; // Di chuyển banner
+}

@@ -4,6 +4,9 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
+    <!-- Thêm Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body <?php body_class(); ?>>
     <header>
@@ -27,7 +30,6 @@
             <a href="#"><i class="search-icon"></i></a>
             <a href="#"><i class="user-icon"></i></a>
             <a href="#"><i class="language-icon"></i></a>
-            <a href="#"><i class="cart-icon"></i><span class="cart-count">0</span></a>
         </div>
     </header>
     <?php wp_footer(); ?>

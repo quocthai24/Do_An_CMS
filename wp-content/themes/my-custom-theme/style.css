@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 /* Đặt nền tảng cho toàn bộ trang */
-body {
-    font-family: Arial, sans-serif;
+body { 
+    font-family: 'Lato', sans-serif; /* Áp dụng font Lato cho toàn bộ body */
     margin: 0;
     padding: 0;
 }
@@ -76,3 +78,129 @@ header {
     font-size: 12px;
     margin-left: 5px;
 }
+
+/* Phần Banner */
+.banner {
+    position: relative;
+    overflow: hidden; /* Ẩn các phần không nằm trong khung */
+    width: 100vw; /* Chiều rộng 100% của viewport */
+    margin: 0 auto; /* Căn giữa */
+}
+
+.banner-container {
+    display: flex;
+    transition: transform 0.5s ease; /* Hiệu ứng mượt mà khi chuyển slide */
+}
+
+.banner-slide {
+    min-width: 100%; /* Chiều rộng mỗi slide là 100% */
+    opacity: 0; /* Ẩn slide khi bắt đầu */
+    transition: opacity 0.5s ease; /* Hiệu ứng mờ khi chuyển slide */
+}
+
+.banner-slide.active {
+    opacity: 1; /* Hiện slide khi active */
+}
+
+.banner-slide img {
+    width: 100%; /* Ảnh sẽ chiếm toàn bộ chiều rộng của slide */
+    height: auto; /* Giữ tỷ lệ ảnh */
+}
+
+.carousel-inner img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của slider */
+    height: auto; /* Giữ tỷ lệ ảnh */
+    max-height: 400px; /* Giới hạn chiều cao tối đa của hình ảnh */
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%; /* Căn giữa theo chiều dọc */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translate(2%, -50%); /* Dịch chuyển lại để chính xác giữa */
+    text-align: center; /* Căn giữa nội dung */
+    color: #fff; /* Màu chữ trắng */
+}
+
+.carousel-caption h5 {
+    font-size: 35px; /* Kích thước cho tiêu đề */
+    font-family: 'Lato', sans-serif; /* Font cho tiêu đề */
+}
+
+.carousel-caption p {
+    font-size: 40px; /* Kích thước cho mô tả */
+    font-weight: 700; /* Định dạng bold cho mô tả */
+    font-family: 'Lato', sans-serif; /* Font cho mô tả */
+}
+
+/* Khác với button group như đã đề cập trước đó */
+.button-group {
+    margin-top: 10px; /* Khoảng cách giữa mô tả và nhóm nút */
+}
+
+.btn {
+    margin: 5px; /* Khoảng cách giữa các nút */
+}
+
+
+.customer-reviews {
+    padding: 40px 0;
+    background-color: #f9f9f9; /* Màu nền cho phần ý kiến khách hàng */
+}
+
+.customer-reviews h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.customer-reviews .carousel-item {
+    text-align: center; /* Căn giữa nội dung */
+}
+
+.customer-reviews img {
+    width: 60px; /* Hoặc bất kỳ kích thước nào bạn muốn */
+    height: auto; /* Giữ tỷ lệ */
+}
+
+.carousel-item p {
+    font-style: italic; /* Làm cho dòng ý kiến nghiêng */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    z-index: 10; /* Để các nút nằm trên banner */
+}
+
+.prev {
+    left: 10px; /* Căn trái nút trước */
+}
+
+.next {
+    right: 10px; /* Căn phải nút sau */
+}
+
+.footer {
+    background-color: #343a40; /* Màu nền cho footer */
+}
+
+.footer a {
+    color: #ffffff; /* Màu chữ cho các liên kết */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+}
+
+.footer a:hover {
+    color: cyan; /* Màu chữ khi hover */
+}
+
+.footer h5 {
+    margin-bottom: 15px; /* Khoảng cách giữa tiêu đề và danh sách */
+}
+
+
