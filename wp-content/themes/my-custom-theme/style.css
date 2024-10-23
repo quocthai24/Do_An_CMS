@@ -1,0 +1,78 @@
+/* Đặt nền tảng cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS cho header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Logo */
+.logo img {
+    max-height: 50px; /* Chiều cao của logo */
+    width: auto;
+}
+
+/* Menu chính */
+.main-nav {
+    flex: 1;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease; /* Chỉ thay đổi màu chữ khi hover */
+}
+
+/* Hiệu ứng hover: chỉ đổi màu chữ thành cyan */
+.main-nav ul li a:hover {
+    color: cyan; /* Màu chữ chuyển thành cyan khi hover */
+}
+
+/* Icon trong header */
+.header-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.header-icons a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Thêm hiệu ứng cho icon */
+}
+
+.header-icons a:hover {
+    color: cyan; /* Khi hover vào icon thì chữ chuyển sang màu cyan */
+}
+
+.header-icons .cart-count {
+    background-color: black;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: 5px;
+}
