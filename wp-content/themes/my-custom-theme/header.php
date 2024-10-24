@@ -19,7 +19,7 @@
         <nav class="main-nav">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Collections</a></li>
+                <li><a href="<?php echo get_permalink(get_page_by_path('san-pham')); ?>">Collections</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Shortcodes</a></li>
                 <li><a href="#">Blog</a></li>

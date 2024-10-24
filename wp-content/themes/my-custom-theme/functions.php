@@ -31,3 +31,17 @@ function my_custom_theme_enqueue_scripts() {
 }
 add_action('wp_enqueue_scripts', 'my_custom_theme_enqueue_scripts');
 
+function create_product_page() {
+    // Kiểm tra xem trang "Sản Phẩm" đã tồn tại chưa
+    if (!get_page_by_title('Sản Phẩm')) {
+        // Tạo trang mới
+        $new_page_id = wp_insert_post(array(
+            'post_title'     => 'Sản Phẩm',
+            'post_content'   => '',
+            'post_status'    => 'publish',
+            'post_type'      => 'page',
+            'page_template'  => 'page-products.php' // Chỉ định template cho trang
+        ));
+    }
+}
+add_action('after_setup_theme', 'create_product_page');

@@ -11,7 +11,7 @@
                 <p>Select Your Style</p>
                 <div class="button-group">
                     <a href="#" class="btn btn-primary">View More</a>
-                    <a href="#" class="btn btn-secondary">Buy Now</a>
+                    <a href="<?php echo get_permalink(get_page_by_path('san-pham')); ?>" class="btn btn-secondary">Buy Now</a>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
                 <p>Select Your Style</p>
                 <div class="button-group">
                     <a href="#" class="btn btn-primary">View More</a>
-                    <a href="#" class="btn btn-secondary">Buy Now</a>
+                    <a href="<?php echo get_permalink(get_page_by_path('san-pham')); ?>" class="btn btn-secondary">Buy Now</a>
                 </div>
             </div>
         </div>
